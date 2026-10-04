@@ -1,179 +1,1317 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Backstreet Survival: Enhanced — Fan Wiki</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Backstreet Survival: Enhanced Wiki</title>
+
 <style>
-:root{--bg:#0d0f12;--panel:#171a1f;--panel2:#20242b;--text:#f4f5f7;--muted:#a9b0bb;--accent:#f4c542;--line:#303641}
-*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#0b0d10,#12151a);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,sans-serif}
-header{padding:42px 20px 34px;text-align:center;border-bottom:1px solid var(--line);background:radial-gradient(circle at 50% 0,#3b2d0e 0,#15181d 42%,#0d0f12 75%)}
-h1{font-size:clamp(30px,6vw,58px);margin:0 0 8px}.tag{color:var(--muted);max-width:760px;margin:auto}
-nav{position:sticky;top:0;background:#101216ee;backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:10px;text-align:center;z-index:2}
-nav a{color:var(--text);text-decoration:none;margin:0 10px;font-weight:650}nav a:hover{color:var(--accent)}
-main{max-width:1050px;margin:auto;padding:28px 18px 70px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:15px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 8px 25px #0003}
-.card h3{margin-top:0}.hero{display:grid;grid-template-columns:1.4fr .8fr;gap:18px}.big{padding:26px}
-@media(max-width:700px){.hero{grid-template-columns:1fr}}
-.badge{display:inline-block;padding:5px 9px;border-radius:999px;background:var(--panel2);font-size:13px;margin:3px}
-.mythic{border:1px solid #d9a91d;background:#3a2d0c}.legendary{border:1px solid #c77820}.epic{border:1px solid #8e55c7}.rare{border:1px solid #3f80c9}
-input,select{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:#0f1115;color:var(--text);font-size:15px}
-table{width:100%;border-collapse:collapse;margin-top:14px}th,td{text-align:left;padding:12px;border-bottom:1px solid var(--line)}th{color:var(--muted)}
-.notice{border-left:4px solid var(--accent);background:#211d10;padding:14px 16px;border-radius:10px}
-footer{text-align:center;color:var(--muted);padding:30px;border-top:1px solid var(--line)}
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0d10;
+    color: #e8e8e8;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #15191f, #242b35);
+    border-bottom: 2px solid #3b4654;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.7rem;
+    color: #ffffff;
+}
+
+header p {
+    margin: 8px 0 0;
+    color: #aeb8c4;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #11151a;
+    border-bottom: 1px solid #303842;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+nav a {
+    display: inline-block;
+    padding: 13px 15px;
+    color: #cfd6de;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    background: #202731;
+    color: white;
+}
+
+.container {
+    width: min(1200px, 94%);
+    margin: auto;
+}
+
+section {
+    padding: 35px 0;
+    border-bottom: 1px solid #242a32;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 0;
+    color: #ffffff;
+}
+
+h3 {
+    color: #dfe6ee;
+}
+
+.card {
+    background: #151a20;
+    border: 1px solid #303842;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    background: #12161b;
+}
+
+th,
+td {
+    border: 1px solid #303842;
+    padding: 11px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #202731;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #171c22;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 9px;
+    margin: 3px;
+    border-radius: 6px;
+    background: #252c35;
+    color: #dce4ec;
+    font-size: 13px;
+}
+
+.common {
+    color: #d0d0d0;
+}
+
+.uncommon {
+    color: #63d471;
+}
+
+.rare {
+    color: #5aa9ff;
+}
+
+.epic {
+    color: #bd6cff;
+}
+
+.legendary {
+    color: #ffae42;
+}
+
+.mythic {
+    color: #ffdf4d;
+}
+
+.warning {
+    border-left: 4px solid #d9a441;
+    background: #211d13;
+    padding: 14px;
+    border-radius: 5px;
+}
+
+.info {
+    border-left: 4px solid #4d9cff;
+    background: #121c2a;
+    padding: 14px;
+    border-radius: 5px;
+}
+
+.search-area {
+    margin: 20px 0;
+}
+
+#search {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #3a424d;
+    background: #0e1216;
+    color: white;
+    font-size: 16px;
+}
+
+select {
+    margin-top: 10px;
+    padding: 10px;
+    background: #11161b;
+    color: white;
+    border: 1px solid #3a424d;
+    border-radius: 7px;
+}
+
+.item-card {
+    transition: transform .15s ease, border-color .15s ease;
+}
+
+.item-card:hover {
+    transform: translateY(-2px);
+    border-color: #566474;
+}
+
+.price {
+    font-weight: bold;
+    color: #79d98b;
+}
+
+.unknown {
+    color: #aab3bd;
+    font-style: italic;
+}
+
+footer {
+    padding: 30px 20px;
+    text-align: center;
+    color: #89939f;
+    background: #090b0e;
+}
+
+small {
+    color: #89939f;
+}
+
+ul {
+    padding-left: 22px;
+}
+
+code {
+    background: #20262e;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+@media (max-width: 700px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    th,
+    td {
+        font-size: 13px;
+        padding: 8px;
+    }
+}
 </style>
 </head>
-<body>
-<header>
-  <h1>🗑️ Backstreet Survival: Enhanced</h1>
-  <p class="tag">Unofficial community wiki • Items • Rarities • Prices • Cats • Secrets</p>
-</header>
-<nav>
-  <a href="#overview">Overview</a><a href="#items">Items</a><a href="#rarities">Rarities</a><a href="#cats">Cats</a><a href="#activities">Activities</a><a href="#locations">Locations</a><a href="#badges">Badges</a><a href="#secrets">Secrets</a><a href="#updates">Updates</a>
-</nav>
-<main>
-<section class="hero">
-  <div class="card big">
-    <span class="badge">FAN WIKI</span>
-    <h2>Welcome to the back alley.</h2>
-    <p>Use this site to keep track of discoveries in Backstreet Survival: Enhanced. Community-reported information is clearly labeled until it is verified in-game.</p>
-    <div class="notice"><strong>Current confirmed entry:</strong> Mythic Golden Ring — sells for <strong>$100</strong> (player-reported; verify in-game).</div>
-  </div>
-  <div class="card">
-    <h3>Rarity ladder</h3>
-    <p><span class="badge rare">Rare</span> → <span class="badge epic">Epic</span> → <span class="badge legendary">Legendary</span> → <span class="badge mythic">Mythic</span></p>
-    <p class="tag">This ordering is based on the game's displayed rarity categories. Exact drop rates are not yet documented here.</p>
-  </div>
-</section>
 
+<body>
+
+<header>
+    <h1>Backstreet Survival: Enhanced Wiki</h1>
+    <p>Community-made guide, database, and fact archive</p>
+    <p><small>Version 2.0 • Updated October 3, 2026</small></p>
+</header>
+
+<nav>
+    <a href="#overview">Overview</a>
+    <a href="#rarities">Rarities</a>
+    <a href="#items">Items</a>
+    <a href="#activities">Activities</a>
+    <a href="#shops">Shops</a>
+    <a href="#crafting">Crafting</a>
+    <a href="#restaurant">Restaurant</a>
+    <a href="#locations">Locations</a>
+    <a href="#bank">Bank</a>
+    <a href="#passes">Passes</a>
+    <a href="#rebirth">Rebirth</a>
+    <a href="#badges">Badges</a>
+    <a href="#cats">Cats</a>
+    <a href="#secrets">Secrets</a>
+    <a href="#updates">Updates</a>
+</nav>
+
+<main class="container">
 
 <section id="overview">
-<h2>📖 Game Overview</h2>
-<div class="card">
-  <p><strong>Backstreet Survival: Enhanced</strong> is an unofficially documented Roblox survival/simulator experience by <strong>Hoshineko Studio</strong>. The official Roblox description says it was created, developed, and is maintained by <strong>@1lia_a</strong>.</p>
-  <p>The core loop described by the developer is to survive in a poor town, dig through trash and do other activities, and gradually work out of poverty.</p>
-  <p>The Enhanced version is described by the developer as a remaster/reimagining of the original Backstreet Survival, continued by its original developer under Hoshineko Studio.</p>
-  <div class="notice"><strong>Verification rule:</strong> Official game information is marked confirmed. Player discoveries are marked separately until checked in-game.</div>
-</div>
-</section>
+    <h2>Overview</h2>
 
-<section id="activities">
-<h2>🎮 Activities & Systems</h2>
-<div class="grid">
-  <div class="card"><h3>🗑️ Trash collecting</h3><p>Dig through trash and discover items. This is one of the main activities named in the official game description.</p><span class="badge">Confirmed</span></div>
-  <div class="card"><h3>🏪 Bean Shop</h3><p>The official description mentions the Bean Shop as part of the game's activities.</p><span class="badge">Confirmed</span></div>
-  <div class="card"><h3>🎣 Fishing</h3><p>Fishing-related badges exist in the public badge data, making fishing a system worth documenting.</p><span class="badge">Badge evidence</span></div>
-  <div class="card"><h3>🏦 Bank</h3><p>A public badge named “Bank Enjoyer” exists, so the bank is documented as a game system.</p><span class="badge">Badge evidence</span></div>
-  <div class="card"><h3>🏭 BeanCo Factory</h3><p>A public badge references the BeanCo Factory. Exact mechanics should be added after in-game verification.</p><span class="badge">Needs details</span></div>
-</div>
-</section>
+    <div class="card">
+        <p>
+            <strong>Backstreet Survival: Enhanced</strong> is a survival/economy-style Roblox
+            game where players collect trash, make money, craft items, fish, cook, garden,
+            use shops, explore dangerous areas, and build up their wealth.
+        </p>
 
-<section id="locations">
-<h2>🗺️ Locations</h2>
-<div class="card">
-<table><thead><tr><th>Location</th><th>What we know</th><th>Status</th></tr></thead>
-<tbody>
-<tr><td>Backstreet / town</td><td>Main setting described by the game.</td><td>🟢 Confirmed</td></tr>
-<tr><td>Bean Shop</td><td>Named in the official description.</td><td>🟢 Confirmed</td></tr>
-<tr><td>Bank</td><td>Supported by the public “Bank Enjoyer” badge.</td><td>🟡 Badge evidence</td></tr>
-<tr><td>BeanCo Factory</td><td>Referenced by a public badge.</td><td>🟡 Badge evidence</td></tr>
-<tr><td>Survivor Island</td><td>Listed among systems/locations to document; exact current details need an in-game check.</td><td>🔴 Needs verification</td></tr>
-</tbody></table>
-</div>
-</section>
+        <p>
+            This wiki records player-confirmed information and facts provided by players.
+            Exact prices, odds, requirements, and mechanics that have not been confirmed
+            are marked as unknown rather than guessed.
+        </p>
+    </div>
 
-<section id="badges">
-<h2>🏆 Badges</h2>
-<div class="card">
-<p>Public badge data shows many achievements, including <strong>Cat Ritual</strong>, <strong>Bank Enjoyer</strong>, <strong>Bean Bandit</strong>, <strong>Bean Capitalist</strong>, <strong>A REAL TRASH</strong>, <strong>Professional Chef</strong>, <strong>Cargo Redistribution</strong>, and <strong>THE END</strong>.</p>
-<p class="tag">Badge existence is evidence that an achievement exists; it does not by itself reveal the exact steps to earn it.</p>
-<table><thead><tr><th>Badge</th><th>Wiki status</th></tr></thead>
-<tbody>
-<tr><td>Cat Ritual</td><td>🟡 Badge confirmed; exact cat steps need verification</td></tr>
-<tr><td>Bank Enjoyer</td><td>🟡 Badge confirmed</td></tr>
-<tr><td>Bean Bandit</td><td>🟡 Badge confirmed</td></tr>
-<tr><td>Bean Capitalist</td><td>🟡 Badge confirmed</td></tr>
-<tr><td>A REAL TRASH</td><td>🟡 Badge confirmed</td></tr>
-<tr><td>THE END</td><td>🟡 Badge confirmed</td></tr>
-</tbody></table>
-</div>
-</section>
-
-<section id="updates">
-<h2>🕒 Update History</h2>
-<div class="card">
-<table><thead><tr><th>Version</th><th>Date</th><th>Source</th></tr></thead>
-<tbody>
-<tr><td>Poverty Edition 3.6</td><td>01.10.2026</td><td>Official Roblox game description</td></tr>
-<tr><td>Legacy version 3.0</td><td>20.08.2026</td><td>Official description of the original/legacy experience</td></tr>
-</tbody></table>
-<p class="tag">Dates use the developer's DD.MM.YYYY format.</p>
-</div>
-</section>
-
-<section id="items">
-<h2>🗑️ Item Database</h2>
-<div class="grid">
-  <div class="card"><input id="search" placeholder="Search items..."></div>
-  <div class="card"><select id="rarity"><option value="">All rarities</option><option>Rare</option><option>Epic</option><option>Legendary</option><option>Mythic</option></select></div>
-</div>
-<div class="card" style="margin-top:15px">
-<table><thead><tr><th>Item</th><th>Rarity</th><th>Sell price</th><th>Status</th></tr></thead>
-<tbody id="itemsBody">
-<tr data-name="golden ring" data-rarity="Mythic"><td>Golden Ring</td><td><span class="badge mythic">Mythic</span></td><td>$100</td><td>🟡 Player-confirmed</td></tr>
-</tbody></table>
-<p class="tag">Add new rows as you discover items. Keep uncertain information labeled instead of guessing.</p>
-</div>
+    <div class="info">
+        <strong>Wiki rule:</strong> Player-reported mechanics are labeled when the exact
+        official value has not been independently verified.
+    </div>
 </section>
 
 <section id="rarities">
-<h2>✨ Rarities</h2>
-<div class="grid">
-  <div class="card rare"><h3>Rare</h3><p>Rare trash category.</p></div>
-  <div class="card epic"><h3>Epic</h3><p>Epic trash category.</p></div>
-  <div class="card legendary"><h3>Legendary</h3><p>Legendary trash category.</p></div>
-  <div class="card mythic"><h3>Mythic</h3><p>Highest category currently documented on this wiki.</p></div>
-</div>
+    <h2>Rarities</h2>
+
+    <div class="card">
+        <p>The currently documented rarity ladder is:</p>
+
+        <p>
+            <span class="badge common">Common</span>
+            →
+            <span class="badge uncommon">Uncommon</span>
+            →
+            <span class="badge rare">Rare</span>
+            →
+            <span class="badge epic">Epic</span>
+            →
+            <span class="badge legendary">Legendary</span>
+            →
+            <span class="badge mythic">Mythic</span>
+        </p>
+
+        <p>
+            <strong>Mythic</strong> is currently the highest documented rarity.
+            Exact drop rates are not currently known.
+        </p>
+    </div>
+</section>
+
+<section id="items">
+    <h2>Items</h2>
+
+    <div class="grid">
+
+        <div class="card item-card">
+            <h3 class="mythic">Golden Ring</h3>
+            <p><strong>Rarity:</strong> Mythic</p>
+            <p><strong>Sell Price:</strong> <span class="price">$100</span></p>
+            <p><strong>Status:</strong> Player-confirmed</p>
+        </div>
+
+        <div class="card item-card">
+            <h3>Baseball Bat</h3>
+            <p><strong>Price:</strong> <span class="price">$5</span></p>
+            <p>Used for certain robbery mechanics and can also kill rats.</p>
+        </div>
+
+        <div class="card item-card">
+            <h3>Gas Mask</h3>
+            <p><strong>Approximate Price:</strong> <span class="price">$300</span></p>
+            <p>Required for surviving the toxic air in the Sewer.</p>
+        </div>
+
+        <div class="card item-card">
+            <h3>Epic Treasure Chest</h3>
+            <p><strong>Location:</strong> Beach trash piles</p>
+            <p><strong>Opening Cost:</strong> <span class="price">$10</span></p>
+            <p>The contents are not guaranteed to be worth more than the $10 opening cost.</p>
+        </div>
+
+        <div class="card item-card">
+            <h3>Lottery Ticket</h3>
+            <p><strong>Price:</strong> <span class="price">$1</span></p>
+            <p><strong>Win Chance:</strong> 1 in 100</p>
+            <p><strong>Prize:</strong> <span class="price">$100</span></p>
+        </div>
+
+        <div class="card item-card">
+            <h3>Trash Bags</h3>
+            <p>Sold at the Poor Store.</p>
+            <p>Used to store more trash.</p>
+        </div>
+
+        <div class="card item-card">
+            <h3>Better Trash-Picking Tools</h3>
+            <p>New/better tools can be purchased at the Poor Store.</p>
+            <p>Better tools allow the player to pick up more items at once.</p>
+        </div>
+
+        <div class="card item-card">
+            <h3>Batteries</h3>
+            <p>Sold at the Poor Store.</p>
+            <p>Provide microwave boost speeds.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="activities">
+    <h2>Activities</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Trash Digging</h3>
+            <p>
+                Search trash piles for items and sell the items for money.
+            </p>
+
+            <p>Trash piles can contain items with these rarities:</p>
+
+            <p>
+                <span class="badge common">Common</span>
+                <span class="badge uncommon">Uncommon</span>
+                <span class="badge rare">Rare</span>
+                <span class="badge epic">Epic</span>
+                <span class="badge legendary">Legendary</span>
+                <span class="badge mythic">Mythic</span>
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Bean Factory</h3>
+            <p>
+                Make beans at the Bean Factory to earn money.
+            </p>
+
+            <p>
+                You need at least <strong>$80</strong> to buy the clothing needed
+                to work there.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Fishing</h3>
+            <p>
+                Catch fish, cook the fish, and sell the cooked fish to people for money.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Begging</h3>
+            <p>
+                Beg on the side of the street for money.
+            </p>
+
+            <p>
+                People may ignore you, meaning you can receive no money.
+            </p>
+
+            <div class="warning">
+                <strong>In-game mechanic:</strong> Player-reported gameplay also says
+                a baseball bat can be used to rob people after begging interactions.
+                This is documented only as an in-game mechanic.
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Gardening</h3>
+
+            <p>
+                Grow plants and collect them before they decay.
+            </p>
+
+            <p>
+                If a plant decays before it is picked up, the money from that plant is lost.
+            </p>
+
+            <p>
+                Rats can eat plants.
+            </p>
+
+            <p>
+                Killing a rat while gardening gives <strong>$1 per rat</strong>.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="shops">
+    <h2>Shops</h2>
+
+    <div class="card">
+        <h3>Bean Shop</h3>
+
+        <p>
+            The Bean Shop can be robbed at certain times.
+        </p>
+
+        <ul>
+            <li>A notification appears when the Bean Shop becomes available to rob.</li>
+            <li>A notification appears whenever the shop is being robbed.</li>
+            <li>A baseball bat can be used to smash items inside.</li>
+            <li>Loot from smashed items can be sold.</li>
+            <li>The shop owner has a turret.</li>
+            <li>The baseball bat costs $5.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Poor Store</h3>
+
+        <p>The Poor Store sells:</p>
+
+        <ul>
+            <li>New/better trash-picking tools</li>
+            <li>Trash bags</li>
+            <li>Batteries</li>
+            <li>Lottery tickets</li>
+            <li>Cardboard hat</li>
+            <li>Homeless signs</li>
+            <li>Shirts/T-shirts</li>
+        </ul>
+
+        <h4>Lottery</h4>
+
+        <p>
+            Each lottery ticket costs <strong>$1</strong>.
+            The documented chance to win is <strong>1 in 100</strong>,
+            with a <strong>$100</strong> prize.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Electronic Store</h3>
+
+        <p>
+            The Electronic Store converts trash/materials into more valuable objects.
+            See the full crafting database below.
+        </p>
+    </div>
+</section>
+
+<section id="crafting">
+    <h2>Electronic Store Crafting</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Craft</th>
+                <th>Materials</th>
+                <th>Time</th>
+                <th>Cost</th>
+                <th>Payout</th>
+                <th>Profit</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>Regular Camera</td>
+                <td>
+                    1 Rusty Camera<br>
+                    2 Foil<br>
+                    2 Nails<br>
+                    2 Plastic
+                </td>
+                <td>30 seconds</td>
+                <td>$15</td>
+                <td>$38.50</td>
+                <td>$23.50</td>
+            </tr>
+
+            <tr>
+                <td>Regular TV</td>
+                <td>
+                    1 Broken TV<br>
+                    2 Foil<br>
+                    2 Nails<br>
+                    3 Plastic
+                </td>
+                <td>1 minute</td>
+                <td>$27</td>
+                <td>$72.50</td>
+                <td>$45.50</td>
+            </tr>
+
+            <tr>
+                <td>Laptop</td>
+                <td>
+                    1 Motherboard<br>
+                    1 Hard Drive<br>
+                    1 Broken TV<br>
+                    4 Nails
+                </td>
+                <td>1 minute</td>
+                <td>$67</td>
+                <td>$172</td>
+                <td>$105</td>
+            </tr>
+
+            <tr>
+                <td>Watch</td>
+                <td>
+                    1 Watch<br>
+                    1 Foil<br>
+                    3 Plastic
+                </td>
+                <td>30 seconds</td>
+                <td>$5</td>
+                <td>$13</td>
+                <td>$8</td>
+            </tr>
+
+            <tr>
+                <td>Flashlight</td>
+                <td>
+                    1 Bottle<br>
+                    1 Foil<br>
+                    1 Nail<br>
+                    2 Plastic
+                </td>
+                <td>10 seconds</td>
+                <td>$1</td>
+                <td>$6</td>
+                <td>$5</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <div class="card">
+        <h3>Drone Blueprint</h3>
+
+        <p><strong>Cost:</strong> $1,000</p>
+
+        <p>
+            Requires maximum reputation.
+        </p>
+
+        <p>
+            The drone automatically farms trash.
+        </p>
+    </div>
+
+    <div class="info">
+        <strong>Important:</strong> The profits shown above are calculated from the
+        supplied crafting cost and payout values. They do not account for the value
+        of materials obtained elsewhere.
+    </div>
+</section>
+
+<section id="restaurant">
+    <h2>Restaurant</h2>
+
+    <div class="card">
+        <p>
+            The Restaurant lets players make food using supplies obtained from trash.
+        </p>
+
+        <h3>Croissant</h3>
+
+        <table>
+            <tr>
+                <th>Material</th>
+                <th>Amount</th>
+            </tr>
+            <tr>
+                <td>Paper</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Plastic</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Cook Time</td>
+                <td>90 seconds</td>
+            </tr>
+            <tr>
+                <td>Sell Price</td>
+                <td>$5</td>
+            </tr>
+        </table>
+
+        <h3>Microwave Placement</h3>
+
+        <p>
+            Without the Cooking License, the microwave can only be placed in the
+            back room.
+        </p>
+
+        <p>
+            With the Cooking License, the microwave can be placed anywhere.
+        </p>
+    </div>
+</section>
+
+<section id="locations">
+    <h2>Locations</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Beach</h3>
+
+            <ul>
+                <li>Fishing is available.</li>
+                <li>Crates float around in the ocean.</li>
+                <li>Sharks are present.</li>
+                <li>Trash piles can be searched.</li>
+                <li>Epic Treasure Chests can be dug up from beach trash piles.</li>
+                <li>Opening an Epic Treasure Chest costs $10.</li>
+                <li>Beach access requires a one-time $100 ticket.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Sewer</h3>
+
+            <ul>
+                <li>Contains trash piles.</li>
+                <li>Has toxic air.</li>
+                <li>A gas mask is required.</li>
+                <li>The gas mask costs around $300.</li>
+                <li>An alarm can signal an incoming wave.</li>
+                <li>Players should quickly climb the ladder into the safe zone.</li>
+                <li>A large wave comes through the Sewer.</li>
+                <li>Players outside the safe zone can be swept away.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Bank</h3>
+
+            <p>
+                The Bank allows players to deposit and withdraw cash and view
+                transaction logs.
+            </p>
+
+            <p>
+                Deposited cash earns interest.
+            </p>
+
+            <p>
+                Interest is credited every 24 hours.
+            </p>
+
+            <p>
+                The exact interest rate is currently unknown.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Bean Shop</h3>
+            <p>
+                Bean Shop is the main location associated with Bean Shop robbery
+                mechanics.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Bean Factory</h3>
+            <p>
+                Players can work here making beans after purchasing the required
+                clothing.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Poor Store</h3>
+            <p>
+                Sells trash-collecting equipment, bags, batteries, lottery tickets,
+                and cosmetics.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Electronic Store</h3>
+            <p>
+                Used to craft better objects from collected materials.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="bank">
+    <h2>Bank</h2>
+
+    <div class="card">
+        <ul>
+            <li>Deposit cash.</li>
+            <li>Withdraw cash.</li>
+            <li>View transaction logs.</li>
+            <li>Deposited cash earns interest.</li>
+            <li>Interest is credited every 24 hours.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Golden Card</h3>
+
+        <p><strong>Price:</strong> 199 Robux</p>
+        <p><strong>Benefit:</strong> 2× Bank Income</p>
+    </div>
+</section>
+
+<section id="passes">
+    <h2>Game Passes & Membership</h2>
+
+    <div class="warning">
+        Some pass pairings/details were supplied by players and may need official
+        verification. Values below are recorded from the provided game information.
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Pass / Membership</th>
+                <th>Price</th>
+                <th>Benefit</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Trash License</td>
+                <td class="unknown">Not provided</td>
+                <td class="unknown">Exact benefit not fully specified</td>
+            </tr>
+
+            <tr>
+                <td>2× Trash Sale</td>
+                <td>249 Robux</td>
+                <td>Trash sells for 2× normal value</td>
+            </tr>
+
+            <tr>
+                <td>Fishing License</td>
+                <td class="unknown">Not provided</td>
+                <td class="unknown">Exact pairing/details unclear</td>
+            </tr>
+
+            <tr>
+                <td>2× Fish Sell</td>
+                <td>249 Robux</td>
+                <td>Fish sell for 2× normal value</td>
+            </tr>
+
+            <tr>
+                <td>Golden Card</td>
+                <td>199 Robux</td>
+                <td>2× Bank Income</td>
+            </tr>
+
+            <tr>
+                <td>Cooking License</td>
+                <td>199 Robux</td>
+                <td>Microwave can be placed anywhere</td>
+            </tr>
+
+            <tr>
+                <td>Auto Fishing</td>
+                <td>249 Robux</td>
+                <td>No need to play the fishing minigame; fishing works automatically</td>
+            </tr>
+
+            <tr>
+                <td>Greenhouse License</td>
+                <td>249 Robux</td>
+                <td>
+                    VIP plots, 2× growth, and no rats inside the VIP plot
+                </td>
+            </tr>
+
+            <tr>
+                <td>Game Membership</td>
+                <td>$5/month</td>
+                <td>
+                    Chat player tag, 20% tool speed, +1 loot, free VIP servers
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="card">
+        <h3>Greenhouse License — Important Detail</h3>
+
+        <p>
+            The no-rat protection applies to the <strong>VIP plot</strong>.
+            Rats can still appear outside the VIP plot.
+        </p>
+    </div>
+</section>
+
+<section id="chaos">
+    <h2>Chaos Events</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Airstrike</h3>
+
+            <p><strong>Price:</strong> 79 Robux</p>
+
+            <p>
+                Bombers attack the entire city.
+            </p>
+
+            <p>
+                Players caught in a blast are eliminated in-game.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Blackout</h3>
+
+            <p><strong>Price:</strong> 99 Robux</p>
+
+            <ul>
+                <li>Night only.</li>
+                <li>Enables PvP for everyone.</li>
+                <li>Lights turn off.</li>
+                <li>Described as "no laws, pure anarchy."</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section id="rebirth">
+    <h2>Rebirth</h2>
+
+    <div class="card">
+
+        <p>
+            Rebirth resets the player's cash/statistics in exchange for the rebirth.
+        </p>
+
+        <ul>
+            <li>No money reward is given for rebirthing.</li>
+            <li>Cash/statistics reset.</li>
+            <li>Skins remain.</li>
+            <li>Game passes remain.</li>
+            <li>Roblox Plus benefits remain.</li>
+            <li>VIP server access remains.</li>
+        </ul>
+
+        <p>
+            <strong>Required cash:</strong>
+            <span class="unknown">Exact requirement not currently provided.</span>
+        </p>
+
+    </div>
+</section>
+
+<section id="aid">
+    <h2>Humanitarian Aid</h2>
+
+    <div class="card">
+
+        <p>
+            Humanitarian Aid provides free food and free money every day.
+        </p>
+
+        <p>
+            To receive it, players must:
+        </p>
+
+        <ul>
+            <li>Join the game group.</li>
+            <li>Like the game.</li>
+        </ul>
+
+    </div>
+</section>
+
+<section id="helipad">
+    <h2>Helipad</h2>
+
+    <div class="card">
+
+        <p>
+            You need at least <strong>$50,000 in your wallet</strong> to fly.
+        </p>
+
+        <p>
+            The $50,000 is not spent. It is a flex/status requirement.
+        </p>
+
+    </div>
+</section>
+
+<section id="road">
+    <h2>Road Hazards & Cannon</h2>
+
+    <div class="card">
+
+        <h3>Traffic</h3>
+
+        <p>
+            Crossing the road to reach areas such as the Beach, Bean Shop, or Bank
+            can be dangerous.
+        </p>
+
+        <p>
+            Getting hit by a car instantly kills/eliminates the character.
+        </p>
+
+        <h3>Cannon Guy</h3>
+
+        <p>
+            The Cannon Guy provides a shortcut across the road.
+        </p>
+
+        <p>
+            <strong>Cost:</strong> $5
+        </p>
+
+        <p>
+            The cannon launches the player across the road, allowing them to
+            bypass traffic.
+        </p>
+
+    </div>
+</section>
+
+<section id="selling">
+    <h2>Selling Crafted Items</h2>
+
+    <div class="card">
+
+        <p>
+            TVs and other crafted items can be sold to passersby.
+        </p>
+
+        <ol>
+            <li>Go onto the street.</li>
+            <li>Equip the TV or other crafted item.</li>
+            <li>Sell it to a passerby.</li>
+        </ol>
+
+        <p>
+            This applies to crafted electronics and other crafted items.
+        </p>
+
+    </div>
+</section>
+
+<section id="badges">
+    <h2>Badges</h2>
+
+    <div class="card">
+
+        <p>Badges previously documented for the game include:</p>
+
+        <div>
+            <span class="badge">Cat Ritual</span>
+            <span class="badge">Bank Enjoyer</span>
+            <span class="badge">Bean Bandit</span>
+            <span class="badge">Bean Capitalist</span>
+            <span class="badge">A REAL TRASH</span>
+            <span class="badge">Professional Chef</span>
+            <span class="badge">Cargo Redistribution</span>
+            <span class="badge">THE END</span>
+        </div>
+
+        <p class="unknown">
+            Badge requirements are not fully documented in this version.
+        </p>
+
+    </div>
 </section>
 
 <section id="cats">
-<h2>🐈 Cat Locations</h2>
-<div class="card">
-  <p><strong>Cat Ritual</strong> is a documented badge in the game's public badge listings, but this wiki does not yet have verified step-by-step cat locations.</p>
-  <table><thead><tr><th>Cat</th><th>Location</th><th>How to get it</th><th>Status</th></tr></thead>
-  <tbody><tr><td>Unknown</td><td>—</td><td>Needs an in-game discovery</td><td>🔴 Unverified</td></tr></tbody></table>
-</div>
+    <h2>Cats</h2>
+
+    <div class="card">
+
+        <p>
+            Cats are part of the game's secrets/exploration content.
+        </p>
+
+        <p class="unknown">
+            Specific cat locations and requirements have not yet been fully
+            documented in the information currently available for Version 2.0.
+        </p>
+
+        <p>
+            This section is reserved for future confirmed cat locations,
+            interactions, and secrets.
+        </p>
+
+    </div>
 </section>
 
 <section id="secrets">
-<h2>🔐 Secrets & Discoveries</h2>
-<div class="grid">
-  <div class="card"><h3>Cat Ritual</h3><p>Badge exists; exact secret conditions need to be documented.</p><span class="badge">Needs testing</span></div>
-  <div class="card"><h3>Hidden interactions</h3><p>Add secret buttons, locations, NPC interactions, and easter eggs here.</p><span class="badge">Community</span></div>
-  <div class="card"><h3>Secret items</h3><p>Record unusual finds with screenshots and the update version.</p><span class="badge">Community</span></div>
-</div>
+    <h2>Secrets & Weird Facts</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Poop Damage</h3>
+
+            <p>
+                Slipping on poop in front of the Bean Shop deals
+                <strong>50 damage</strong>.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Falling Damage</h3>
+
+            <p>
+                Falling from a building deals approximately
+                <strong>15–20 damage</strong>.
+            </p>
+
+            <p>
+                That means the documented poop hazard can deal more damage
+                than falling from a building.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>AFK Sleeping</h3>
+
+            <p>
+                If a player stays AFK for long enough, their character eventually
+                starts sleeping on the floor.
+            </p>
+
+            <p>
+                If the player moves while sleeping, the character screams while
+                getting up.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Rats</h3>
+
+            <p>
+                Rats can eat garden plants.
+            </p>
+
+            <p>
+                Killing a rat while gardening gives $1.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Baseball Bat</h3>
+
+            <p>
+                The baseball bat has multiple documented in-game uses, including
+                smashing Bean Shop objects and killing rats.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="rules">
+    <h2>Important Mechanics</h2>
+
+    <div class="card">
+
+        <h3>Trash Tools</h3>
+
+        <p>
+            Trash-picking tools are not simply upgraded through a linear upgrade
+            system. Better/new tools are purchased at the Poor Store.
+        </p>
+
+        <h3>Garden Plants</h3>
+
+        <p>
+            Plants need to be picked up before they decay. Once a plant decays
+            before pickup, the associated money is lost.
+        </p>
+
+        <h3>VIP Greenhouse</h3>
+
+        <p>
+            The Greenhouse License prevents rats only inside the VIP plot.
+            It does not prevent rats from appearing outside it.
+        </p>
+
+    </div>
+</section>
+
+<section id="updates">
+    <h2>Update History</h2>
+
+    <div class="card">
+
+        <h3>Version 2.0 — October 3, 2026</h3>
+
+        <ul>
+            <li>Expanded activity database.</li>
+            <li>Added Poor Store information.</li>
+            <li>Added Electronic Store crafting recipes.</li>
+            <li>Added Restaurant and Croissant recipe.</li>
+            <li>Added Beach information.</li>
+            <li>Added Sewer information.</li>
+            <li>Added Bank mechanics.</li>
+            <li>Added Game Pass and Membership database.</li>
+            <li>Added Chaos Events.</li>
+            <li>Added Humanitarian Aid.</li>
+            <li>Added Helipad requirements.</li>
+            <li>Added Rebirth information.</li>
+            <li>Added Road hazards and Cannon Guy.</li>
+            <li>Added gardening and rat mechanics.</li>
+            <li>Added weird facts and secrets.</li>
+            <li>Added Common and Uncommon rarity levels.</li>
+            <li>Added Golden Ring information.</li>
+            <li>Added crafting profit calculations.</li>
+            <li>Expanded search/filter functionality.</li>
+        </ul>
+
+    </div>
+
+    <div class="card">
+
+        <h3>Version 1.1</h3>
+
+        <p>
+            Original fan-wiki version containing basic items, rarities, cats,
+            activities, locations, badges, secrets, and update history.
+        </p>
+
+    </div>
+</section>
+
+<section id="search">
+    <h2>Wiki Search</h2>
+
+    <div class="search-area">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search the wiki..."
+            aria-label="Search the wiki"
+        >
+
+        <select id="rarityFilter">
+            <option value="all">All Rarities</option>
+            <option value="Common">Common</option>
+            <option value="Uncommon">Uncommon</option>
+            <option value="Rare">Rare</option>
+            <option value="Epic">Epic</option>
+            <option value="Legendary">Legendary</option>
+            <option value="Mythic">Mythic</option>
+        </select>
+
+    </div>
+
+    <div id="searchResults"></div>
 </section>
 
 <section id="sources">
-<h2>📚 Sources & Verification</h2>
-<div class="card">
-  <p><strong>Official game:</strong> Backstreet Survival: Enhanced by Hoshineko Studio. The public Roblox description currently lists Poverty Edition 3.6 and Last Update: 01.10.2026 (DD.MM.YYYY).</p><p><strong>Public badge data:</strong> Used only to document badge existence and names; exact unlock requirements are not assumed unless verified.</p>
-  <p><strong>Wiki rule:</strong> Official/in-game evidence beats community reports. Every discovery should include the date, game version, screenshot if possible, and whether it was independently verified.</p>
-  <p class="tag">This is an unofficial fan site and is not affiliated with Roblox or Hoshineko Studio.</p>
-</div>
+    <h2>Sources & Verification</h2>
+
+    <div class="card">
+
+        <p>
+            This is a community-made fan wiki.
+        </p>
+
+        <p>
+            Much of the information in Version 2.0 was supplied through
+            player-confirmed observations and gameplay information.
+        </p>
+
+        <p>
+            Values marked as unknown have intentionally not been invented.
+        </p>
+
+        <p>
+            When new screenshots, gameplay evidence, official information,
+            or confirmed facts become available, this wiki can be updated.
+        </p>
+
+    </div>
 </section>
+
 </main>
-<footer>Backstreet Survival: Enhanced Fan Wiki • Version 1.1 • Last checked October 3, 2026</footer>
+
+<footer>
+    <p>Backstreet Survival: Enhanced Fan Wiki</p>
+    <p>Version 2.0 • Updated October 3, 2026</p>
+    <p>Community-made • Not affiliated with Roblox or the game's developers</p>
+</footer>
+
 <script>
-const search=document.getElementById('search'), rarity=document.getElementById('rarity');
-function filter(){
- const q=search.value.toLowerCase(), r=rarity.value;
- document.querySelectorAll('#itemsBody tr').forEach(row=>{
-   const okName=row.dataset.name.includes(q), okR=!r||row.dataset.rarity===r;
-   row.style.display=okName&&okR?'':'none';
- });
+const searchInput = document.getElementById("search");
+const rarityFilter = document.getElementById("rarityFilter");
+const sections = [...document.querySelectorAll("main section")];
+
+function runSearch() {
+    const searchText = searchInput.value.toLowerCase().trim();
+    const rarity = rarityFilter.value;
+
+    let results = [];
+
+    sections.forEach(section => {
+        const text = section.innerText.toLowerCase();
+
+        const textMatches =
+            searchText === "" ||
+            text.includes(searchText);
+
+        const rarityMatches =
+            rarity === "all" ||
+            text.includes(rarity.toLowerCase());
+
+        if (textMatches && rarityMatches) {
+            results.push(section);
+        }
+    });
+
+    sections.forEach(section => {
+        if (searchText === "" && rarity === "all") {
+            section.style.display = "";
+        } else {
+            section.style.display =
+                results.includes(section) ? "" : "none";
+        }
+    });
 }
-search.addEventListener('input',filter);rarity.addEventListener('change',filter);
+
+searchInput.addEventListener("input", runSearch);
+rarityFilter.addEventListener("change", runSearch);
 </script>
+
 </body>
 </html>
