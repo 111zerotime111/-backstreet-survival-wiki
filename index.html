@@ -1,9 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Backstreet Survival: Enhanced Wiki | Roblox</title>
 
@@ -14,7 +14,7 @@
 
   <meta
     name="keywords"
-    content="Backstreet Survival Enhanced, Backstreet Survival, Roblox, Backstreet Survival wiki, Roblox wiki, Hoshineko Studio, Golden Ring, Auto Fishing, cats, badges, game passes, locations, secrets"
+    content="Backstreet Survival Enhanced, Backstreets Survival, Roblox, wiki, cats, cat ritual, items, badges, game passes, locations, secrets, fishing, BeanCo"
   >
 
   <meta name="author" content="Backstreet Survival: Enhanced Fan Wiki">
@@ -27,20 +27,17 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta
-    property="og:title"
-    content="Backstreet Survival: Enhanced Wiki | Roblox"
-  >
+  <meta property="og:title" content="Backstreet Survival: Enhanced Wiki">
   <meta
     property="og:description"
-    content="An unofficial fan wiki for Backstreet Survival: Enhanced on Roblox, documenting items, locations, badges, game passes, cats, secrets, rarities, activities, and updates."
+    content="Fan-made wiki for Backstreet Survival: Enhanced on Roblox."
   >
   <meta
     property="og:url"
     content="https://111zerotime111.github.io/-backstreet-survival-wiki/"
   >
 
-  <!-- Twitter/X preview -->
+  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary">
   <meta
     name="twitter:title"
@@ -48,30 +45,23 @@
   >
   <meta
     name="twitter:description"
-    content="Unofficial fan wiki for Backstreet Survival: Enhanced on Roblox."
+    content="Items, cats, badges, locations, secrets, game passes, activities and updates for Backstreet Survival: Enhanced."
   >
 
-  <!-- Schema.org structured data -->
+  <!-- Search engine structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://111zerotime111.github.io/-backstreet-survival-wiki/#website",
-        "name": "Backstreet Survival: Enhanced Wiki",
-        "url": "https://111zerotime111.github.io/-backstreet-survival-wiki/",
-        "description": "Unofficial fan wiki for Backstreet Survival: Enhanced on Roblox."
+        "name": "Backstreet Survival: Enhanced Fan Wiki",
+        "url": "https://111zerotime111.github.io/-backstreet-survival-wiki/"
       },
       {
         "@type": "VideoGame",
-        "@id": "https://111zerotime111.github.io/-backstreet-survival-wiki/#game",
         "name": "Backstreet Survival: Enhanced",
         "gamePlatform": "Roblox",
-        "genre": [
-          "Survival",
-          "Simulator"
-        ],
         "publisher": {
           "@type": "Organization",
           "name": "Hoshineko Studio"
@@ -79,14 +69,15 @@
       },
       {
         "@type": "WebPage",
-        "@id": "https://111zerotime111.github.io/-backstreet-survival-wiki/#page",
-        "url": "https://111zerotime111.github.io/-backstreet-survival-wiki/",
         "name": "Backstreet Survival: Enhanced Wiki",
+        "url": "https://111zerotime111.github.io/-backstreet-survival-wiki/",
         "isPartOf": {
-          "@id": "https://111zerotime111.github.io/-backstreet-survival-wiki/#website"
+          "@type": "WebSite",
+          "name": "Backstreet Survival: Enhanced Fan Wiki"
         },
         "about": {
-          "@id": "https://111zerotime111.github.io/-backstreet-survival-wiki/#game"
+          "@type": "VideoGame",
+          "name": "Backstreet Survival: Enhanced"
         }
       }
     ]
@@ -95,1477 +86,1025 @@
 
   <style>
     :root {
-      --bg: #0b0d10;
-      --bg2: #11151b;
-      --panel: #171b21;
-      --panel2: #20252d;
-      --panel3: #272d36;
-      --text: #f5f6f8;
-      --muted: #aeb5c0;
-      --accent: #f4c542;
-      --accent2: #ffd95c;
-      --line: #343b46;
-      --green: #58d68d;
-      --yellow: #f4c542;
+      --bg: #090b10;
+      --bg2: #10141c;
+      --card: #151a24;
+      --card2: #1b2230;
+      --border: #2a3445;
+      --text: #f4f7fb;
+      --muted: #aab4c4;
+      --accent: #ffcc33;
+      --accent2: #ff8a3d;
+      --green: #55d98a;
+      --blue: #62a8ff;
+      --purple: #bd7cff;
       --red: #ff6b6b;
-      --blue: #65a9ff;
-      --purple: #b878ff;
+      --shadow: 0 12px 35px rgba(0,0,0,.35);
     }
 
     * {
       box-sizing: border-box;
-    }
-
-    html {
       scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
       background:
-        radial-gradient(
-          circle at top,
-          #29200d 0,
-          var(--bg) 30%,
-          var(--bg) 70%
-        );
+        radial-gradient(circle at top, #18202e 0%, var(--bg) 45%);
       color: var(--text);
-      font-family:
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
       line-height: 1.65;
     }
 
     a {
-      color: var(--accent2);
+      color: var(--accent);
+      text-decoration: none;
     }
 
     a:hover {
-      color: white;
+      text-decoration: underline;
     }
 
     header {
-      padding: 60px 20px 45px;
-      text-align: center;
-      border-bottom: 1px solid var(--line);
-      background:
-        radial-gradient(
-          circle at 50% 0,
-          #4b380d 0,
-          #181b20 42%,
-          #0b0d10 80%
-        );
-    }
-
-    header h1 {
-      margin: 0 0 10px;
-      font-size: clamp(32px, 7vw, 64px);
-      line-height: 1.1;
-      letter-spacing: -1px;
-    }
-
-    header p {
-      max-width: 850px;
-      margin: 0 auto;
-      color: var(--muted);
-      font-size: 17px;
-    }
-
-    .subtitle {
-      margin-top: 14px;
-    }
-
-    .version {
-      display: inline-block;
-      margin-top: 18px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: var(--panel2);
-      border: 1px solid var(--line);
-      color: var(--accent2);
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    nav {
+      background: rgba(9,11,16,.95);
+      border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
       z-index: 100;
-      padding: 10px;
-      text-align: center;
-      background: rgba(14, 17, 21, 0.95);
-      border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(10px);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 12px 18px;
+      display: flex;
+      gap: 8px;
       overflow-x: auto;
       white-space: nowrap;
     }
 
     nav a {
-      display: inline-block;
-      padding: 8px 10px;
-      margin: 2px;
-      color: var(--text);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 700;
+      padding: 8px 12px;
       border-radius: 8px;
+      color: var(--muted);
+      font-size: 14px;
     }
 
     nav a:hover {
-      background: var(--panel2);
-      color: var(--accent2);
-    }
-
-    main {
-      width: min(1150px, calc(100% - 30px));
-      margin: auto;
-      padding: 30px 0 80px;
-    }
-
-    section {
-      scroll-margin-top: 75px;
-      margin: 22px 0;
+      background: var(--card2);
+      color: var(--text);
+      text-decoration: none;
     }
 
     .hero {
-      display: grid;
-      grid-template-columns: 1.4fr 0.8fr;
-      gap: 18px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 20px 55px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 6vw, 4rem);
+      margin: 0 0 12px;
+      line-height: 1.1;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .version {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 7px 13px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--card);
+      color: var(--accent);
+      font-size: 13px;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px 60px;
+    }
+
+    section {
+      margin: 55px 0;
+      scroll-margin-top: 80px;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+    }
+
+    section h3 {
+      margin-top: 0;
+      color: var(--accent);
     }
 
     .grid {
       display: grid;
-      grid-template-columns:
-        repeat(auto-fit, minmax(230px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
     }
 
     .card {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 16px;
+      background: linear-gradient(145deg, var(--card), var(--bg2));
+      border: 1px solid var(--border);
+      border-radius: 14px;
       padding: 20px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      box-shadow: var(--shadow);
     }
 
     .card:hover {
-      border-color: #4a5260;
+      border-color: #43516a;
+      transform: translateY(-2px);
+      transition: .2s ease;
     }
 
-    .big {
-      padding: 28px;
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 12px;
+      margin-top: 30px;
     }
 
-    h2 {
-      margin-top: 0;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--line);
-      font-size: 28px;
+    .fact {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px;
+      text-align: center;
     }
 
-    h3 {
-      margin-top: 0;
-      font-size: 20px;
+    .fact strong {
+      display: block;
+      font-size: 1.4rem;
+      color: var(--accent);
     }
 
-    p {
-      color: #d7dbe1;
+    ul, ol {
+      padding-left: 25px;
     }
 
-    .muted {
-      color: var(--muted);
+    li {
+      margin: 7px 0;
     }
 
-    .tag,
-    .badge {
+    .tag {
       display: inline-block;
-      padding: 5px 10px;
+      padding: 4px 9px;
       margin: 3px;
       border-radius: 999px;
-      background: var(--panel2);
-      border: 1px solid var(--line);
-      color: var(--muted);
       font-size: 12px;
-      font-weight: 700;
+      border: 1px solid var(--border);
+      background: var(--card2);
     }
 
     .confirmed {
       color: var(--green);
-      border-color: rgba(88, 214, 141, 0.4);
+      border-color: rgba(85,217,138,.4);
     }
 
     .reported {
-      color: var(--yellow);
-      border-color: rgba(244, 197, 66, 0.4);
+      color: var(--blue);
+      border-color: rgba(98,168,255,.4);
     }
 
-    .unverified {
+    .verify {
+      color: var(--accent);
+      border-color: rgba(255,204,51,.4);
+    }
+
+    .danger {
       color: var(--red);
-      border-color: rgba(255, 107, 107, 0.4);
     }
 
-    .mythic {
-      border-color: #d9a91d;
-      background: #3a2d0c;
-      color: #ffd95c;
+    .search-box {
+      margin: 20px 0;
     }
 
-    .legendary {
-      border-color: #c77820;
-      color: #ffb65c;
-    }
-
-    .epic {
-      border-color: #8e55c7;
-      color: #c995ff;
-    }
-
-    .rare {
-      border-color: #3f80c9;
-      color: #7bb8ff;
-    }
-
-    .notice {
-      margin: 16px 0;
-      padding: 15px 17px;
-      border-left: 4px solid var(--accent);
-      border-radius: 10px;
-      background: #211d10;
-    }
-
-    .notice p {
-      margin-bottom: 0;
-    }
-
-    .stat-grid {
-      display: grid;
-      grid-template-columns:
-        repeat(auto-fit, minmax(160px, 1fr));
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    .stat {
-      padding: 15px;
-      background: var(--panel2);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 22px;
-      color: var(--accent2);
-    }
-
-    .stat span {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .search-area {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 12px;
-      margin-bottom: 15px;
-    }
-
-    input,
-    select {
+    .search-box input {
       width: 100%;
-      padding: 13px 14px;
-      border: 1px solid var(--line);
+      padding: 14px 16px;
       border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #0c1017;
+      color: white;
+      font-size: 16px;
       outline: none;
-      background: #0e1115;
-      color: var(--text);
-      font-size: 15px;
     }
 
-    input:focus,
-    select:focus {
+    .search-box input:focus {
       border-color: var(--accent);
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 10px;
+      overflow: hidden;
+      border-radius: 12px;
+      background: var(--card);
+      border: 1px solid var(--border);
     }
 
-    th,
-    td {
-      padding: 13px 11px;
+    th, td {
+      padding: 13px;
+      border-bottom: 1px solid var(--border);
       text-align: left;
-      border-bottom: 1px solid var(--line);
-      vertical-align: top;
     }
 
     th {
+      background: var(--card2);
+      color: var(--accent);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .rarity-rare {
+      color: #62a8ff;
+    }
+
+    .rarity-epic {
+      color: #bd7cff;
+    }
+
+    .rarity-legendary {
+      color: #ff9c3d;
+    }
+
+    .rarity-mythic {
+      color: #ffcc33;
+      font-weight: bold;
+    }
+
+    .notice {
+      padding: 16px;
+      border-left: 4px solid var(--accent);
+      background: var(--card);
+      border-radius: 8px;
       color: var(--muted);
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
     }
 
-    tr:hover td {
-      background: rgba(255,255,255,0.02);
+    .step {
+      margin: 15px 0;
+      padding: 18px;
+      background: var(--card2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
     }
 
-    .timeline {
-      border-left: 2px solid var(--line);
-      padding-left: 20px;
-    }
-
-    .timeline-item {
-      position: relative;
-      margin-bottom: 22px;
-    }
-
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      width: 10px;
-      height: 10px;
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       background: var(--accent);
-      left: -26px;
-      top: 7px;
-    }
-
-    .back-top {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 8px 12px;
-      border-radius: 8px;
-      background: var(--panel2);
-      text-decoration: none;
-      font-size: 13px;
+      color: #111;
+      font-weight: bold;
+      margin-right: 8px;
     }
 
     footer {
+      border-top: 1px solid var(--border);
       padding: 35px 20px;
       text-align: center;
       color: var(--muted);
-      border-top: 1px solid var(--line);
-      background: #0d1014;
-    }
-
-    footer p {
-      color: var(--muted);
-      margin: 5px;
+      background: #07090d;
     }
 
     .small {
       font-size: 13px;
+      color: var(--muted);
     }
 
-    @media (max-width: 750px) {
+    @media (max-width: 650px) {
       .hero {
-        grid-template-columns: 1fr;
+        padding-top: 55px;
       }
 
-      .search-area {
-        grid-template-columns: 1fr;
+      section h2 {
+        font-size: 1.6rem;
       }
 
-      table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
+      th, td {
+        padding: 9px;
+        font-size: 14px;
       }
 
-      header {
-        padding-top: 42px;
-      }
-
-      nav a {
-        font-size: 13px;
+      nav {
+        padding-left: 10px;
+        padding-right: 10px;
       }
     }
   </style>
 </head>
 
-<body id="top">
+<body>
 
 <header>
-  <h1>🗑️ Backstreet Survival: Enhanced</h1>
+  <nav>
+    <a href="#overview">Overview</a>
+    <a href="#activities">Activities</a>
+    <a href="#locations">Locations</a>
+    <a href="#items">Items</a>
+    <a href="#rarities">Rarities</a>
+    <a href="#passes">Game Passes</a>
+    <a href="#badges">Badges</a>
+    <a href="#cats">Cats</a>
+    <a href="#secrets">Secrets</a>
+    <a href="#updates">Updates</a>
+    <a href="#verification">Verification</a>
+  </nav>
+</header>
 
-  <p class="subtitle">
-    The unofficial community wiki for the Roblox survival experience.
-    Discover items, locations, badges, cats, game passes, secrets,
-    activities, rarities, and updates.
+<div class="hero">
+  <h1>Backstreet Survival: <span>Enhanced</span></h1>
+
+  <p>
+    The unofficial fan wiki for the Roblox survival game
+    <strong>Backstreet Survival: Enhanced</strong>.
+    Explore items, locations, cats, badges, secrets, activities,
+    game passes, and community discoveries.
   </p>
 
   <div class="version">
-    Poverty Edition 3.6 • Wiki Version 2.0
+    Wiki Version 3.0
   </div>
-</header>
-
-<nav aria-label="Wiki navigation">
-  <a href="#overview">Overview</a>
-  <a href="#activities">Activities</a>
-  <a href="#locations">Locations</a>
-  <a href="#items">Items</a>
-  <a href="#rarities">Rarities</a>
-  <a href="#gamepasses">Game Passes</a>
-  <a href="#badges">Badges</a>
-  <a href="#cats">Cats</a>
-  <a href="#secrets">Secrets</a>
-  <a href="#updates">Updates</a>
-  <a href="#sources">Sources</a>
-</nav>
+</div>
 
 <main>
 
-<!-- HERO -->
+  <!-- QUICK FACTS -->
+  <section id="quick-facts">
+    <h2>📌 Quick Facts</h2>
 
-<section class="hero" aria-label="Wiki introduction">
+    <div class="facts">
+      <div class="fact">
+        <strong>Roblox</strong>
+        Platform
+      </div>
 
-  <div class="card big">
+      <div class="fact">
+        <strong>Hoshineko Studio</strong>
+        Developer / Studio
+      </div>
 
-    <span class="badge">FAN WIKI</span>
-    <span class="badge confirmed">COMMUNITY DATABASE</span>
+      <div class="fact">
+        <strong>3.6</strong>
+        Poverty Edition
+      </div>
 
-    <h2>Welcome to the Backstreet</h2>
+      <div class="fact">
+        <strong>4</strong>
+        Hidden Cats
+      </div>
 
-    <p>
-      Welcome to the fan-made Backstreet Survival: Enhanced wiki.
-      This site collects information about the game in one place so
-      players can quickly find items, locations, activities, badges,
-      game passes, cats, secrets, and updates.
-    </p>
+      <div class="fact">
+        <strong>249 R$</strong>
+        Auto Fishing
+      </div>
 
-    <div class="notice">
-      <strong>Wiki verification rule:</strong>
-      Information is labeled according to how well it is supported.
-      Official or directly verified information is treated as confirmed,
-      while player discoveries are clearly labeled as reported until
-      they can be verified.
+      <div class="fact">
+        <strong>Mythic</strong>
+        Golden Ring
+      </div>
     </div>
+  </section>
 
-  </div>
+  <!-- OVERVIEW -->
+  <section id="overview">
+    <h2>🎮 Game Overview</h2>
 
-  <div class="card">
-
-    <h3>✨ Rarity Ladder</h3>
-
-    <p>
-      <span class="badge rare">Rare</span>
-      →
-      <span class="badge epic">Epic</span>
-      →
-      <span class="badge legendary">Legendary</span>
-      →
-      <span class="badge mythic">Mythic</span>
-    </p>
-
-    <p class="muted small">
-      These are the rarity categories currently documented by this wiki.
-      Exact drop rates are not assumed unless verified.
-    </p>
-
-  </div>
-
-</section>
-
-
-<!-- QUICK FACTS -->
-
-<section aria-labelledby="quick-facts">
-
-  <h2 id="quick-facts">📌 Quick Facts</h2>
-
-  <div class="stat-grid">
-
-    <div class="stat">
-      <strong>3.6</strong>
-      <span>Recorded Poverty Edition</span>
-    </div>
-
-    <div class="stat">
-      <strong>$100</strong>
-      <span>Golden Ring Sell Value</span>
-    </div>
-
-    <div class="stat">
-      <strong>249</strong>
-      <span>Auto Fishing Robux</span>
-    </div>
-
-    <div class="stat">
-      <strong>$5</strong>
-      <span>Cannon Guy Cost</span>
-    </div>
-
-    <div class="stat">
-      <strong>4</strong>
-      <span>Documented Rarity Levels</span>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- OVERVIEW -->
-
-<section id="overview">
-
-  <h2>📖 Game Overview</h2>
-
-  <div class="card">
-
-    <p>
-      <strong>Backstreet Survival: Enhanced</strong> is a Roblox
-      survival/simulator experience associated with
-      <strong>Hoshineko Studio</strong>.
-    </p>
-
-    <p>
-      The developer information documented by this wiki identifies
-      <strong>@1lia_a</strong> as the creator, developer, and maintainer.
-    </p>
-
-    <p>
-      The game's central theme involves surviving in a poor town,
-      digging through trash, completing activities, and gradually
-      working your way out of poverty.
-    </p>
-
-    <p>
-      The Enhanced version is described as a remaster/reimagining
-      connected to the original Backstreet Survival experience.
-    </p>
-
-    <div class="notice">
-      <strong>Current documented version:</strong>
-      Poverty Edition 3.6.
-      <br>
-      <strong>Last recorded update:</strong>
-      01.10.2026.
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ACTIVITIES -->
-
-<section id="activities">
-
-  <h2>🎮 Activities &amp; Systems</h2>
-
-  <div class="grid">
-
-    <article class="card">
-      <h3>🗑️ Trash Collecting</h3>
-
+    <div class="card">
       <p>
-        Dig through trash and discover items. This is one of the
-        main activities associated with the game.
+        <strong>Backstreet Survival: Enhanced</strong> is a Roblox game
+        developed and maintained by <strong>Hoshineko Studio</strong>.
       </p>
 
-      <span class="badge confirmed">Confirmed</span>
-    </article>
-
-
-    <article class="card">
-      <h3>🏪 Bean Shop</h3>
-
       <p>
-        The Bean Shop is a documented shop and part of the game's
-        activity and economy systems.
+        The Enhanced version features activities such as trash collecting,
+        fishing, shopping, banking, the BeanCo Factory, hidden secrets,
+        badges, collectible cats, and other discoveries.
       </p>
 
-      <span class="badge confirmed">Confirmed</span>
-    </article>
-
-
-    <article class="card">
-      <h3>🎣 Fishing</h3>
-
-      <p>
-        Fishing is a documented gameplay system. The game also has
-        an Auto Fishing game pass.
+      <p class="small">
+        Official game information and community-discovered information may
+        change as the game receives updates.
       </p>
+    </div>
+  </section>
 
-      <span class="badge confirmed">Documented</span>
-    </article>
+  <!-- ACTIVITIES -->
+  <section id="activities">
+    <h2>🛠️ Activities & Systems</h2>
 
+    <div class="grid">
 
-    <article class="card">
-      <h3>🏦 Bank</h3>
+      <div class="card">
+        <h3>🗑️ Trash Collecting</h3>
+        <p>
+          Search around the world and collect trash. Trash collecting is
+          one of the main activities in Backstreet Survival: Enhanced.
+        </p>
+      </div>
 
-      <p>
-        The Bank is a documented location and system. The
-        <strong>Bank Enjoyer</strong> badge also references it.
-      </p>
+      <div class="card">
+        <h3>🫘 Bean Shop</h3>
+        <p>
+          Visit the Bean Shop to interact with the game's bean-related
+          economy and items.
+        </p>
+      </div>
 
-      <span class="badge reported">Badge evidence</span>
-    </article>
+      <div class="card">
+        <h3>🎣 Fishing</h3>
+        <p>
+          Fishing is an activity where players can catch fish through the
+          fishing system and minigame.
+        </p>
+      </div>
 
+      <div class="card">
+        <h3>🏦 Bank</h3>
+        <p>
+          The Bank is one of the game's major locations and systems.
+        </p>
+      </div>
 
-    <article class="card">
-      <h3>🏭 BeanCo Factory</h3>
+      <div class="card">
+        <h3>🏭 BeanCo Factory</h3>
+        <p>
+          BeanCo Factory is a major location and activity area in the
+          Enhanced version.
+        </p>
+      </div>
 
-      <p>
-        BeanCo Factory is a documented location referenced by
-        game badge information.
-      </p>
+    </div>
+  </section>
 
-      <span class="badge reported">Details being documented</span>
-    </article>
+  <!-- LOCATIONS -->
+  <section id="locations">
+    <h2>📍 Locations</h2>
 
-  </div>
+    <div class="grid">
 
-</section>
+      <div class="card">
+        <h3>🏘️ Backstreet / Town</h3>
+        <p>
+          The main area where players can explore, collect trash,
+          discover secrets, and search for hidden cats.
+        </p>
+      </div>
 
+      <div class="card">
+        <h3>🫘 Bean Shop</h3>
+        <p>
+          A shop location connected to the game's bean economy.
+        </p>
+      </div>
 
-<!-- LOCATIONS -->
+      <div class="card">
+        <h3>🏦 Bank</h3>
+        <p>
+          A major location featuring the game's banking system.
+        </p>
+      </div>
 
-<section id="locations">
+      <div class="card">
+        <h3>🏭 BeanCo Factory</h3>
+        <p>
+          An industrial location associated with BeanCo.
+        </p>
+      </div>
 
-  <h2>🗺️ Locations</h2>
+      <div class="card">
+        <h3>🏝️ Survivor Island</h3>
+        <p>
+          A location associated with the Enhanced version.
+        </p>
 
-  <div class="card">
+        <span class="tag verify">Needs Verification</span>
+      </div>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Location</th>
-          <th>Description</th>
-          <th>Status</th>
-        </tr>
-      </thead>
+    </div>
+  </section>
 
-      <tbody>
-
-        <tr>
-          <td>Backstreet / Town</td>
-          <td>
-            The main setting associated with the game's survival
-            gameplay.
-          </td>
-          <td>
-            <span class="badge confirmed">Confirmed</span>
-          </td>
-        </tr>
-
-        <tr>
-          <td>Bean Shop</td>
-          <td>
-            Shop location connected to the Bean economy.
-          </td>
-          <td>
-            <span class="badge confirmed">Confirmed</span>
-          </td>
-        </tr>
-
-        <tr>
-          <td>Bank</td>
-          <td>
-            Financial location referenced by the Bank Enjoyer badge.
-          </td>
-          <td>
-            <span class="badge reported">Badge evidence</span>
-          </td>
-        </tr>
-
-        <tr>
-          <td>BeanCo Factory</td>
-          <td>
-            Factory location referenced by badge information.
-          </td>
-          <td>
-            <span class="badge reported">Documented</span>
-          </td>
-        </tr>
-
-        <tr>
-          <td>Survivor Island</td>
-          <td>
-            Location previously documented by the community.
-            Current details still need in-game verification.
-          </td>
-          <td>
-            <span class="badge unverified">Needs verification</span>
-          </td>
-        </tr>
-
-      </tbody>
-    </table>
-
-  </div>
-
-</section>
-
-
-<!-- ITEMS -->
-
-<section id="items">
-
-  <h2>🧰 Item Database</h2>
-
-  <div class="card">
+  <!-- ITEMS -->
+  <section id="items">
+    <h2>🎒 Items</h2>
 
     <p>
-      Search the documented items below by name or rarity.
+      Search the item database by item name or rarity.
     </p>
 
-    <div class="search-area">
-
+    <div class="search-box">
       <input
+        type="text"
         id="itemSearch"
-        type="search"
         placeholder="Search items..."
         aria-label="Search items"
       >
-
-      <select
-        id="rarityFilter"
-        aria-label="Filter items by rarity"
-      >
-        <option value="">All rarities</option>
-        <option value="Rare">Rare</option>
-        <option value="Epic">Epic</option>
-        <option value="Legendary">Legendary</option>
-        <option value="Mythic">Mythic</option>
-      </select>
-
     </div>
 
-    <table>
-
+    <table id="itemTable">
       <thead>
         <tr>
           <th>Item</th>
           <th>Rarity</th>
           <th>Value</th>
-          <th>Verification</th>
-        </tr>
-      </thead>
-
-      <tbody id="itemsBody">
-
-        <tr
-          data-name="golden ring"
-          data-rarity="Mythic"
-        >
-          <td>
-            <strong>Golden Ring</strong>
-          </td>
-
-          <td>
-            <span class="badge mythic">Mythic</span>
-          </td>
-
-          <td>
-            <strong>$100</strong>
-          </td>
-
-          <td>
-            <span class="badge reported">
-              Player-confirmed
-            </span>
-          </td>
-        </tr>
-
-      </tbody>
-
-    </table>
-
-    <p
-      id="noResults"
-      class="muted"
-      style="display:none"
-    >
-      No documented items match your search.
-    </p>
-
-  </div>
-
-</section>
-
-
-<!-- RARITIES -->
-
-<section id="rarities">
-
-  <h2>✨ Rarities</h2>
-
-  <div class="grid">
-
-    <article class="card rare">
-      <h3>Rare</h3>
-      <p>
-        A documented rarity category.
-      </p>
-    </article>
-
-    <article class="card epic">
-      <h3>Epic</h3>
-      <p>
-        A documented rarity category above Rare.
-      </p>
-    </article>
-
-    <article class="card legendary">
-      <h3>Legendary</h3>
-      <p>
-        A documented rarity category above Epic.
-      </p>
-    </article>
-
-    <article class="card mythic">
-      <h3>Mythic</h3>
-      <p>
-        The highest rarity category currently documented
-        by this wiki.
-      </p>
-    </article>
-
-  </div>
-
-  <div class="notice">
-
-    <strong>Important:</strong>
-
-    Rarity does not automatically tell us the exact chance
-    of obtaining an item. Exact odds should only be added when
-    they have been verified.
-
-  </div>
-
-</section>
-
-
-<!-- GAME PASSES -->
-
-<section id="gamepasses">
-
-  <h2>🎟️ Game Passes</h2>
-
-  <div class="card">
-
-    <table>
-
-      <thead>
-        <tr>
-          <th>Game Pass</th>
-          <th>Price</th>
-          <th>Benefit</th>
+          <th>Information</th>
           <th>Status</th>
         </tr>
       </thead>
 
       <tbody>
 
-        <tr>
+        <tr class="item-row">
+          <td><strong>Golden Ring</strong></td>
+
+          <td class="rarity-mythic">
+            Mythic
+          </td>
+
+          <td>$100</td>
+
           <td>
-            <strong>Auto Fishing</strong>
+            A rare item reported by players.
           </td>
 
           <td>
-            <strong>249 Robux</strong>
-          </td>
-
-          <td>
-            Automatically fishes without requiring the player
-            to play the fishing minigame.
-          </td>
-
-          <td>
-            <span class="badge confirmed">
-              Player-confirmed
+            <span class="tag reported">
+              Player-Confirmed
             </span>
           </td>
         </tr>
 
       </tbody>
-
     </table>
+  </section>
 
-  </div>
+  <!-- RARITIES -->
+  <section id="rarities">
+    <h2>✨ Rarities</h2>
 
-</section>
+    <div class="grid">
 
-
-<!-- BADGES -->
-
-<section id="badges">
-
-  <h2>🏆 Badges</h2>
-
-  <div class="card">
-
-    <p>
-      The following badges are documented on the wiki.
-      Badge existence does not necessarily reveal the exact
-      requirements for earning the badge.
-    </p>
-
-    <table>
-
-      <thead>
-        <tr>
-          <th>Badge</th>
-          <th>Status</th>
-          <th>Notes</th>
-        </tr>
-      </thead>
-
-      <tbody>
-
-        <tr>
-          <td>Cat Ritual</td>
-          <td><section id="cats">
-  <h2>🐱 Cat Ritual</h2>
-
-  <p>
-    The Cat Ritual is a secret activity involving four hidden cat figures
-    scattered around the town. Find all four cats, complete the ritual,
-    and claim the secret reward.
-  </p>
-
-  <div class="card">
-    <h3>1. Find the 4 Hidden Cats 🐱</h3>
-
-    <p>
-      Explore the town and alleys to locate four hidden cat figures.
-      They are typically tucked away in hard-to-see spots.
-    </p>
-
-    <ul>
-      <li>Search behind buildings.</li>
-      <li>Check narrow alleys.</li>
-      <li>Look along exterior walls.</li>
-      <li>Search near trash piles.</li>
-    </ul>
-
-    <p>
-      When you find a cat, walk up to it and interact with it to collect it.
-      Once collected, the cat will be sent ahead to the ritual site.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>2. Head to the Ritual Location 🔮</h3>
-
-    <p>
-      After collecting all four cats, travel to the secret ritual location.
-      The ritual cannot be completed until all four cats have been collected.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>3. Activate the Ritual & Claim Your Reward 🎁</h3>
-
-    <ol>
-      <li>
-        <strong>Place the Cats:</strong>
-        At the ritual site, interact with the environment to trigger the
-        cat event.
-      </li>
-
-      <li>
-        <strong>Open the Chest:</strong>
-        Completing the ritual will spawn a secret reward chest on the ground.
-      </li>
-
-      <li>
-        <strong>Equip Your Skin:</strong>
-        Open the chest to unlock the unique item skin. Open your
-        in-game inventory/backpack, switch to the <strong>Skins</strong>
-        tab, and equip it.
-      </li>
-    </ol>
-
-    <p>
-      Your trash-digging wand will now flash and be covered in
-      <strong>glowing pink cat paw prints!</strong> 🐾
-    </p>
-  </div>
-
-  <div class="verification">
-    <strong>Verification:</strong>
-    Player-reported / community-discovered
-  </div>
-</section>
-          <td>
-            Related to the game's cat system.
-          </td>
-        </tr>
-
-        <tr>
-          <td>Bank Enjoyer</td>
-          <td>🟡 Documented</td>
-          <td>
-            References the Bank.
-          </td>
-        </tr>
-
-        <tr>
-          <td>Bean Bandit</td>
-          <td>🟡 Documented</td>
-          <td>
-            Badge requirement needs documentation.
-          </td>
-        </tr>
-
-        <tr>
-          <td>Bean Capitalist</td>
-          <td>🟡 Documented</td>
-          <td>
-            Badge requirement needs documentation.
-          </td>
-        </tr>
-
-        <tr>
-          <td>A REAL TRASH</td>
-          <td>🟡 Documented</td>
-          <td>
-            Badge requirement needs documentation.
-          </td>
-        </tr>
-
-        <tr>
-          <td>Professional Chef</td>
-          <td>🟡 Documented</td>
-          <td>
-            Badge requirement needs documentation.
-          </td>
-        </tr>
-
-        <tr>
-          <td>Cargo Redistribution</td>
-          <td>🟡 Documented</td>
-          <td>
-            Badge requirement needs documentation.
-          </td>
-        </tr>
-
-        <tr>
-          <td>THE END</td>
-          <td>🟡 Documented</td>
-          <td>
-            Badge requirement needs documentation.
-          </td>
-        </tr>
-
-      </tbody>
-
-    </table>
-
-  </div>
-
-</section>
-
-
-<!-- CATS -->
-
-<section id="cats">
-
-  <h2>🐈 Cats</h2>
-
-  <div class="card">
-
-    <p>
-      Cats are a documented part of Backstreet Survival:
-      Enhanced. The <strong>Cat Ritual</strong> badge is
-      associated with the cat system.
-    </p>
-
-    <table>
-
-      <thead>
-        <tr>
-          <th>Cat</th>
-          <th>Location</th>
-          <th>Requirements</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-
-      <tbody>
-
-        <tr>
-          <td>Cat locations</td>
-          <td>Not fully documented</td>
-          <td>
-            Needs an in-game discovery.
-          </td>
-          <td>
-            <span class="badge unverified">
-              Needs verification
-            </span>
-          </td>
-        </tr>
-
-      </tbody>
-
-    </table>
-
-    <div class="notice">
-      If a cat location is discovered, record the exact location,
-      how to interact with it, the game version, and preferably
-      a screenshot.
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- SECRETS -->
-
-<section id="secrets">
-
-  <h2>🔐 Secrets &amp; Discoveries</h2>
-
-  <div class="grid">
-
-    <article class="card">
-
-      <h3>💥 Cannon Guy</h3>
-
-      <p>
-        Cannon Guy is a player-confirmed secret/mechanic.
-        For <strong>$5</strong>, the cannon can launch the player
-        across the road.
-      </p>
-
-      <span class="badge reported">
-        Player-confirmed
-      </span>
-
-    </article>
-
-
-    <article class="card">
-
-      <h3>🐈 Cat Ritual</h3>
-
-      <p>
-        The Cat Ritual badge is documented, but the exact
-        conditions and steps for earning it still need to
-        be documented.
-      </p>
-
-      <span class="badge unverified">
-        Needs testing
-      </span>
-
-    </article>
-
-
-    <article class="card">
-
-      <h3>❓ Hidden Interactions</h3>
-
-      <p>
-        This section is reserved for unusual NPC interactions,
-        buttons, locations, easter eggs, and other discoveries.
-      </p>
-
-      <span class="badge reported">
-        Community discoveries
-      </span>
-
-    </article>
-
-
-    <article class="card">
-
-      <h3>🧰 Secret Items</h3>
-
-      <p>
-        Unusual or hidden item discoveries can be documented here
-        along with their rarity, value, location, and evidence.
-      </p>
-
-      <span class="badge reported">
-        Community discoveries
-      </span>
-
-    </article>
-
-  </div>
-
-</section>
-
-
-<!-- UPDATES -->
-
-<section id="updates">
-
-  <h2>🕒 Update History</h2>
-
-  <div class="card">
-
-    <div class="timeline">
-
-      <div class="timeline-item">
-
-        <h3>Poverty Edition 3.6</h3>
-
+      <div class="card">
+        <h3 class="rarity-rare">Rare</h3>
         <p>
-          <strong>Date:</strong> 01.10.2026
+          A higher rarity tier for uncommon items.
         </p>
-
-        <span class="badge confirmed">
-          Recorded game version
-        </span>
-
       </div>
 
-
-      <div class="timeline-item">
-
-        <h3>Legacy Version 3.0</h3>
-
+      <div class="card">
+        <h3 class="rarity-epic">Epic</h3>
         <p>
-          <strong>Date:</strong> 20.08.2026
+          A rarer tier above Rare.
         </p>
+      </div>
 
-        <span class="badge confirmed">
-          Recorded legacy version
-        </span>
+      <div class="card">
+        <h3 class="rarity-legendary">Legendary</h3>
+        <p>
+          A very high rarity tier.
+        </p>
+      </div>
 
+      <div class="card">
+        <h3 class="rarity-mythic">Mythic</h3>
+        <p>
+          One of the highest rarity tiers documented on this wiki.
+        </p>
       </div>
 
     </div>
+  </section>
 
-    <p class="muted small">
-      Dates use the DD.MM.YYYY format shown in the documented
-      game information.
-    </p>
-
-  </div>
-
-</section>
-
-
-<!-- VERIFICATION -->
-
-<section id="verification">
-
-  <h2>✅ Wiki Verification System</h2>
-
-  <div class="grid">
+  <!-- GAME PASSES -->
+  <section id="passes">
+    <h2>🎟️ Game Passes</h2>
 
     <div class="card">
 
-      <h3>🟢 Confirmed</h3>
+      <h3>🎣 Auto Fishing</h3>
 
       <p>
-        Information directly supported by the game,
-        official information, or strong in-game evidence.
+        <strong>Price:</strong> 249 Robux
       </p>
-
-    </div>
-
-
-    <div class="card">
-
-      <h3>🟡 Player-Reported</h3>
 
       <p>
-        Information reported or confirmed by a player but
-        still worth independently verifying.
+        Auto Fishing automatically performs the fishing process without
+        requiring the player to manually play the fishing minigame.
       </p>
 
-    </div>
-
-
-    <div class="card">
-
-      <h3>🔴 Needs Verification</h3>
-
-      <p>
-        Information that has not yet been sufficiently
-        confirmed and should not be treated as fact.
-      </p>
+      <span class="tag reported">
+        Player-Confirmed
+      </span>
 
     </div>
+  </section>
 
-  </div>
+  <!-- BADGES -->
+  <section id="badges">
+    <h2>🏆 Badges</h2>
 
-</section>
+    <div class="grid">
 
+      <div class="card">
+        <h3>🐱 Cat Ritual</h3>
+        <p>
+          Connected to the hidden cat ritual.
+        </p>
+      </div>
 
-<!-- SOURCES -->
+      <div class="card">
+        <h3>🏦 Bank Enjoyer</h3>
+        <p>
+          A badge associated with the Bank.
+        </p>
+      </div>
 
-<section id="sources">
+      <div class="card">
+        <h3>🫘 Bean Bandit</h3>
+        <p>
+          A bean-related badge.
+        </p>
+      </div>
 
-  <h2>📚 Sources &amp; Documentation</h2>
+      <div class="card">
+        <h3>💰 Bean Capitalist</h3>
+        <p>
+          A bean-related badge.
+        </p>
+      </div>
 
-  <div class="card">
+      <div class="card">
+        <h3>🗑️ A REAL TRASH</h3>
+        <p>
+          A trash-related badge.
+        </p>
+      </div>
 
-    <h3>Official Game Information</h3>
+      <div class="card">
+        <h3>👨‍🍳 Professional Chef</h3>
+        <p>
+          A cooking-related badge.
+        </p>
+      </div>
 
-    <p>
-      The wiki documents Backstreet Survival: Enhanced as a
-      Roblox experience associated with Hoshineko Studio and
-      developer <strong>@1lia_a</strong>.
-    </p>
+      <div class="card">
+        <h3>📦 Cargo Redistribution</h3>
+        <p>
+          A badge associated with cargo.
+        </p>
+      </div>
 
-    <h3>Badge Information</h3>
+      <div class="card">
+        <h3>🏁 THE END</h3>
+        <p>
+          A badge associated with completing an end-game objective.
+        </p>
+      </div>
 
-    <p>
-      Public badge information is used to document the existence
-      and names of badges. Exact unlock requirements are not
-      assumed unless verified.
-    </p>
+    </div>
+  </section>
 
-    <h3>Community Discoveries</h3>
-
-    <p>
-      Player discoveries are useful for expanding the wiki,
-      but are labeled separately until verified.
-    </p>
+  <!-- CATS -->
+  <section id="cats">
+    <h2>🐱 Cat Ritual</h2>
 
     <div class="notice">
+      <strong>Secret Activity:</strong>
+      The Cat Ritual requires finding four hidden cats and taking them
+      to the secret ritual location.
+    </div>
 
-      <strong>Wiki documentation rule:</strong>
+    <div class="step">
+      <h3>
+        <span class="step-number">1</span>
+        Find the 4 Hidden Cats 🐱
+      </h3>
 
-      When adding a discovery, record:
+      <p>
+        Explore the town and alleys to locate four hidden cat figures.
+        They are typically tucked away in hard-to-see spots.
+      </p>
 
       <ul>
-        <li>What was discovered</li>
-        <li>Where it was found</li>
-        <li>The game version</li>
-        <li>The date it was discovered</li>
-        <li>Whether it was independently verified</li>
-        <li>A screenshot when possible</li>
+        <li>
+          Search behind buildings.
+        </li>
+
+        <li>
+          Check narrow alleys.
+        </li>
+
+        <li>
+          Look along exterior walls.
+        </li>
+
+        <li>
+          Search near trash piles.
+        </li>
+      </ul>
+
+      <p>
+        When you spot a cat figure, walk right up to it and interact
+        with it to pick it up.
+      </p>
+
+      <p>
+        Once collected, the cat will be sent ahead to the ritual site.
+      </p>
+    </div>
+
+    <div class="step">
+      <h3>
+        <span class="step-number">2</span>
+        Head to the Ritual Location 🔮
+      </h3>
+
+      <p>
+        Once you have collected all four cats, navigate to the
+        secret ritual spot.
+      </p>
+    </div>
+
+    <div class="step">
+      <h3>
+        <span class="step-number">3</span>
+        Activate the Ritual & Claim Your Reward 🎁
+      </h3>
+
+      <ol>
+
+        <li>
+          <strong>Place the Cats:</strong>
+          At the ritual site, interact with the environment to trigger
+          the cat event.
+        </li>
+
+        <li>
+          <strong>Open the Chest:</strong>
+          Completing the ritual will spawn a secret reward chest
+          on the ground.
+        </li>
+
+        <li>
+          <strong>Equip Your Skin:</strong>
+          Open the chest to unlock your unique item skin.
+          Open your in-game inventory/backpack menu, switch to the
+          <strong>Skins</strong> tab, and equip it.
+        </li>
+
+      </ol>
+
+      <p>
+        Your trash-digging wand will now flash and be covered in
+        <strong>glowing pink cat paw prints!</strong> 🐾
+      </p>
+    </div>
+
+    <p>
+      <span class="tag reported">
+        Player / Community Discovery
+      </span>
+    </p>
+  </section>
+
+  <!-- SECRETS -->
+  <section id="secrets">
+    <h2>🔮 Secrets</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>🐱 Cat Ritual</h3>
+
+        <p>
+          Find four hidden cats and complete the ritual to receive
+          a secret reward.
+        </p>
+
+        <a href="#cats">
+          View the full Cat Ritual guide →
+        </a>
+      </div>
+
+      <div class="card">
+        <h3>💥 Cannon Guy</h3>
+
+        <p>
+          Cannon Guy can launch the player across the road for
+          <strong>$5</strong>.
+        </p>
+
+        <span class="tag reported">
+          Player-Confirmed
+        </span>
+      </div>
+
+      <div class="card">
+        <h3>🕵️ Hidden Interactions</h3>
+
+        <p>
+          The game contains hidden interactions and discoveries that
+          may not be obvious during normal gameplay.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🎁 Secret Items</h3>
+
+        <p>
+          Community members have discovered items and rewards hidden
+          behind secret interactions.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- UPDATES -->
+  <section id="updates">
+    <h2>📰 Updates</h2>
+
+    <div class="card">
+
+      <h3>Poverty Edition 3.6</h3>
+
+      <p>
+        <strong>Last updated:</strong> 01.10.2026
+      </p>
+
+      <p>
+        Current version information documented by the wiki.
+      </p>
+
+    </div>
+
+    <br>
+
+    <div class="card">
+
+      <h3>Legacy Version 3.0</h3>
+
+      <p>
+        <strong>Date:</strong> 20.08.2026
+      </p>
+
+      <p>
+        Previous version documented for historical reference.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- VERIFICATION -->
+  <section id="verification">
+    <h2>✅ Verification & Sources</h2>
+
+    <div class="card">
+
+      <h3>How information is labeled</h3>
+
+      <p>
+        This wiki separates confirmed information from discoveries
+        that still need additional verification.
+      </p>
+
+      <p>
+        <span class="tag confirmed">
+          Confirmed
+        </span>
+
+        Information verified through reliable game information
+        or direct confirmation.
+      </p>
+
+      <p>
+        <span class="tag reported">
+          Player-Confirmed
+        </span>
+
+        Information directly reported or confirmed by players.
+      </p>
+
+      <p>
+        <span class="tag verify">
+          Needs Verification
+        </span>
+
+        Information that should be checked again against the current
+        version of the game.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Sources</h3>
+
+      <ul>
+        <li>
+          In-game observations
+        </li>
+
+        <li>
+          Player reports and discoveries
+        </li>
+
+        <li>
+          Community documentation
+        </li>
+
+        <li>
+          Official Roblox game information
+        </li>
       </ul>
 
     </div>
+  </section>
 
-  </div>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>ℹ️ About This Wiki</h2>
 
-</section>
+    <div class="card">
 
+      <p>
+        This is an <strong>unofficial fan-made wiki</strong> for
+        Backstreet Survival: Enhanced.
+      </p>
 
-<!-- ABOUT -->
+      <p>
+        This website is not affiliated with Roblox or Hoshineko Studio.
+      </p>
 
-<section id="about">
+      <p>
+        Information may change when the game receives updates.
+        Community discoveries are labeled accordingly.
+      </p>
 
-  <h2>ℹ️ About This Wiki</h2>
+      <p class="small">
+        Last wiki update: October 3, 2026
+      </p>
 
-  <div class="card">
-
-    <p>
-      This website is an <strong>unofficial fan-made wiki</strong>
-      for Backstreet Survival: Enhanced.
-    </p>
-
-    <p>
-      It is not affiliated with, endorsed by, or sponsored by
-      Roblox or Hoshineko Studio.
-    </p>
-
-    <p>
-      The purpose of this wiki is to organize information discovered
-      by players and make it easier for the community to find.
-    </p>
-
-    <p class="muted small">
-      Wiki version 2.0 • Last documented check: October 2026
-    </p>
-
-  </div>
-
-</section>
-
-
-<a class="back-top" href="#top">
-  ↑ Back to top
-</a>
+    </div>
+  </section>
 
 </main>
 
-
 <footer>
-
   <p>
     <strong>Backstreet Survival: Enhanced Fan Wiki</strong>
   </p>
 
   <p>
-    Unofficial community resource • Not affiliated with Roblox
-    or Hoshineko Studio
+    Unofficial fan-made resource. Not affiliated with Roblox or
+    Hoshineko Studio.
   </p>
 
-  <p>
-    Wiki Version 2.0 • Last documented update: October 2026
+  <p class="small">
+    © 2026 Fan Wiki
   </p>
-
 </footer>
-
 
 <script>
   const searchInput = document.getElementById("itemSearch");
-  const rarityFilter = document.getElementById("rarityFilter");
-  const itemRows = document.querySelectorAll("#itemsBody tr");
-  const noResults = document.getElementById("noResults");
+  const rows = document.querySelectorAll(".item-row");
 
-  function filterItems() {
+  searchInput.addEventListener("input", function () {
+    const searchTerm = this.value.toLowerCase().trim();
 
-    const search =
-      searchInput.value.trim().toLowerCase();
+    rows.forEach(function (row) {
+      const text = row.textContent.toLowerCase();
 
-    const rarity =
-      rarityFilter.value;
-
-    let visibleItems = 0;
-
-    itemRows.forEach(row => {
-
-      const name =
-        row.dataset.name.toLowerCase();
-
-      const rowRarity =
-        row.dataset.rarity;
-
-      const matchesSearch =
-        name.includes(search);
-
-      const matchesRarity =
-        rarity === "" ||
-        rowRarity === rarity;
-
-      if (matchesSearch && matchesRarity) {
-
+      if (text.includes(searchTerm)) {
         row.style.display = "";
-        visibleItems++;
-
       } else {
-
         row.style.display = "none";
-
       }
-
     });
-
-    noResults.style.display =
-      visibleItems === 0 ? "block" : "none";
-  }
-
-  searchInput.addEventListener(
-    "input",
-    filterItems
-  );
-
-  rarityFilter.addEventListener(
-    "change",
-    filterItems
-  );
+  });
 </script>
 
 </body>
