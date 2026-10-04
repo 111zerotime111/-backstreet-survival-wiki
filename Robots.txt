@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://111zerotime111.github.io/-backstreet-survival-wiki/sitemap.xml
